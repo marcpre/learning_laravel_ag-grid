@@ -26,7 +26,8 @@
     var res = {!! json_encode($storedTasks) !!};
     console.log("res: " + JSON.stringify(res));
 </script>
+{{-- 
 <script src="example.js"></script>
-
+--}}
 
 </html>

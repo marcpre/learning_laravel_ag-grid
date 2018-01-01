@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Task;
 use Illuminate\Http\Request;
+use Debugbar;
 
 class TaskController extends Controller
 {
@@ -15,6 +16,7 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::orderBy('id', 'desc');
+        Debugbar::info("Tasks" . $tasks);
         return view('welcome')->with('storedTasks', $tasks);
     }
 
