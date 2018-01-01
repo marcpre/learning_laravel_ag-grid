@@ -15,9 +15,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::orderBy('id', 'desc');
-        Debugbar::info("Tasks" . $tasks);
-        return view('welcome')->with('storedTasks', $tasks);
+        $tasks = Task::all();
+        Debugbar::info($tasks); 
+        return view('index')->with('storedTasks', $tasks);
     }
 
     /**

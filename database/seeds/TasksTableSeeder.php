@@ -17,6 +17,8 @@ class TasksTableSeeder extends Seeder
         for ($i = 0; $i < $limit; $i++) {
             DB::table('tasks')->insert([
                 'name' => $faker->sentence(),
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
             ]);
         }
     }
