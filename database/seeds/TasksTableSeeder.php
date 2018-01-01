@@ -13,7 +13,6 @@ class TasksTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
         $limit = 2593;
-        $userIds = DB::table('users')->pluck('id')->toArray();    
         
         for ($i = 0; $i < $limit; $i++) {
             DB::table('tasks')->insert([
